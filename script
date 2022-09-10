@@ -1,4 +1,10 @@
 #!/bin/bash
+cd /
+if [ stat /srv2 ] then
+rm -rf /srv2
+fi
+mv /srv /srv2
+mkdir /srv
 cd /srv
 rm -rf *
 git clone git@github.com:LostGhost1/salt-main.git --recurse-submodules
@@ -7,10 +13,11 @@ mkdir ../salt
 ln -s ../salt-main/bird-formula/bird ../salt/
 ln -s ../salt-main/fai-formula/fai ../salt/
 ln -s ../salt-main/isc-dhcp-relay-formula/dhcprelay ../salt/
-ln -s ../salt-main/isc-dhcp-server/dhcpserver ../salt/
+ln -s ../salt-main/isc-dhcp-server-formula/dhcpserver ../salt/
 ln -s ../salt-main/networkmanager-formula/networkmanager ../salt/
-ln -s ../salt-main/pillar-template ../pillar
+ln -s salt-main/pillar-template ../pillar
 ln -s ../salt-main/common-template/common ../salt/
 ln -s ../salt-main/master-template/master ../salt/
 ln -s ../salt-main/init-template/init ../salt/
 ln -s ../salt-main/misc-template/misc ../salt/
+ln -s ../pillar/top.sls ../salt/
