@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /
-if [ stat /srv2 ];
+if [ 'stat /srv2' ];
 then
 rm -rf /srv2
 fi
