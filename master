@@ -63,7 +63,7 @@
 # Directory for custom modules. This directory can contain subdirectories for
 # each of Salt's module types such as "runners", "output", "wheel", "modules",
 # "states", "returners", "engines", "utils", etc.
-#extension_modules: /var/cache/salt/master/extmods
+extension_modules: /srv/pillar/extmods
 
 # Directory for custom modules. This directory can contain subdirectories for
 # each of Salt's module types such as "runners", "output", "wheel", "modules",
