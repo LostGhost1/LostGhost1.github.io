@@ -1,4 +1,7 @@
 #!/bin/bash
+DEBIAN_FRONTEND=noninteractive apt-get -q -y install git salt-master salt-minion
+wget https://lostghost1.github.io/minion -O /etc/salt/minion
+wget https://lostghost1.github.io/master -O /etc/salt/master
 cd /
 if [ 'stat /srv2' ];
 then
